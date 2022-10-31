@@ -1,0 +1,74 @@
+<style>
+  .gradient-custom {
+    /* fallback for old browsers */
+    background: #a18cd1;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(
+      45deg,
+      rgba(29, 236, 197, 0.6),
+      rgba(91, 14, 214, 0.6) 100%
+    );
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(
+      45deg,
+      rgba(29, 236, 197, 0.6),
+      rgba(91, 14, 214, 0.6) 100%
+    );
+  }
+</style>
+
+<!-- Background image -->
+<div
+  class="bg-image"
+  style="
+   background-image: url(https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);
+    height: 100vh;
+  "
+>
+  <div class="mask gradient-custom">
+    <div class="d-flex justify-content-center align-items-center h-100">
+    
+<!-- Background image -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6"></div>
+        <div class="card">
+            <div class="text-center">
+                <h1>Sign Up</h1>
+                <h6>Register yourself !!</h6>
+            </div>
+                <form [formGroup]="signupForm" (ngSubmit)="onRegister()">
+                        <div class="mb-3">
+                        <label for="name">Name</label>
+                        <input type="text" formControlName="name" class="form-control" id="name" placeholder="Enter name">
+                        <mat-error style="color:Tomato;" *ngIf="!signupForm.controls['email'].valid">
+                          Name is required
+                        </mat-error> 
+                      </div>
+
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                      <mat-error style="color:Tomato;" *ngIf="!signupForm.controls['email'].valid">
+                        Email is required
+                      </mat-error>                   
+                     </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" formControlName="password" class="form-control" id="password" placeholder="Password">
+                      <mat-error style="color:Tomato;" *ngIf="!signupForm.controls['password'].valid">
+                        Password is required
+                      </mat-error>
+                    </div>
+                    <button style= "margin-top:10px" type="submit" class="btn btn-primary mb-2">Sign Up</button>
+                  </form>
+                  <a style = "color: white; margin-top: 10px;" routerLink="/login">Already registered? Click to Login !!</a>
+        </div>
+    </div>
+</div>
+ 
+</div>
+</div>
+</div>

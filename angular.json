@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": ["chart.js","sweetalert2"],
             "outputPath": "dist/digi-verse",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -24,8 +25,10 @@
             ],
             "styles": [
               "src/styles.css"
+             
             ],
-            "scripts": []
+            "scripts": ["node_modules/jquery/dist/jquery.min.js"
+          ]
           },
           "configurations": {
             "production": {
@@ -91,6 +94,7 @@
             ],
             "styles": [
               "src/styles.css"
+             
             ],
             "scripts": []
           }

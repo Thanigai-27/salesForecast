@@ -1,0 +1,156 @@
+
+<link href="https://netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
+
+<div class="container" style="margin-top: 20px;">
+    <div class="panel panel-default">
+      <div class="badge text-bg-primary">
+        <h4>Sales Forecast</h4>
+      </div><br>
+      <div class="panel-body">        
+        <strong>Select dataset from your computer</strong>
+        <div *ngIf="fileStatus.status==='progress'">
+          <div class="progress">
+            <div [style.width.%]="fileStatus.percent" class="progress-bar progress-bar-animated bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                {{ fileStatus.requestType }} {{ fileStatus.percent }} 
+              </div>
+          </div>
+        </div> <hr>
+
+  
+        <form enctype="multipart/form-data" >
+          <fieldset>
+            <div class="form-group col-md-6">
+              <div>
+                <input type="file" (change)="onUploadFiles($any($event).target.files)" name="files" multiple class="form-control" />
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        
+          
+        
+  
+        <form class="form-inline"
+        [formGroup]="yearForm"
+        (ngSubmit)="sendYear(yearForm.get('start_year')?.value, yearForm.get('end_year')?.value)"
+      >
+     
+    <div class="mt-2 col-md-12" >
+
+          
+          <input name="datepicker"
+            class="form-control"
+            type="text"
+            id="datepicker"
+            aria-describedby="year"
+            placeholder="Choose the start year"
+            formControlName="start_year"
+        />
+
+        <input name="datepicker" id="datepicker"
+        class="form-control"
+        type="text"
+        aria-describedby="year"
+        placeholder="Choose the end year"
+        formControlName="end_year"
+    />
+    <mat-error style="color:Tomato;" *ngIf="!yearForm.controls['start_year'].valid || !yearForm.controls['end_year'].valid">
+      *In Year Format*
+    </mat-error>
+    
+          </div>
+          
+        <br>
+        <div class="form-group col-md-6">
+          <button type="submit" class="btn btn-success btn-md">
+            Predict
+          </button>
+        </div>
+      </form>
+        <br>  
+  <div class="w-75 p-3" style="background-color:moccasin;" id="lineChart" >
+    <canvas id="canvas">{{chart}}</canvas>
+  </div>
+</div>
+
+
+
+<div class="card" style="width: 18rem;padding: 10px;">
+<button class="btn btn-success btn-md" (click)="find();onclick();">{{ReadMore?"Show Accuracy":"Show Less"}}</button>
+</div>
+<br>
+<ng-container *ngIf="visible">
+  <div  class="list-inline">
+    <figure >
+      <dl>
+             
+  <dt >
+   
+    R2_score: {{ this.accData?.R2_score }}
+  </dt>
+  <dt  >
+    Variance_score: {{ this.accData?.explained_variance_score }}
+  </dt>
+ <dt >
+      Mean_absolute_error: {{ this.accData?.mean_absolute_error}}
+ </dt>
+<dt  >
+        Mean_squared_error: {{ this.accData?.mean_squared_error }}
+</dt>
+ <dt >
+          Median_absolute_error: {{ this.accData?. median_absolute_error }}
+ </dt>
+      </dl>
+</figure>
+</div>
+</ng-container>
+
+
+<div  class="card" style="width: 18rem;padding: 10px;">
+  <button class="btn btn-success btn-md" (click)="onpick();">{{PickMore?"Predict The future":"Show Less"}}</button>
+  </div>
+
+<ng-container *ngIf="v">
+<div class="card" style="width: 18rem;text-align: center;">
+
+<form
+      [formGroup]="predictForm"
+      (ngSubmit)="predictFuture(predictForm.value)"
+    >
+      <div class="form-group">
+        <input 
+          class="form-control"
+          type="text"
+          id="predictYear"
+          aria-describedby="predictYear"
+          placeholder="Please input a Year"
+          formControlName="year"
+      />
+      </div>
+      <mat-error style="color:Tomato;" *ngIf="!predictForm.controls['year'].valid ">
+        *In Year Format*
+      </mat-error>
+      
+      <div class="text-center" style="padding: 10px;">
+        <button type="submit" class="btn btn-success btn-md">
+          Find
+        </button>
+      </div>
+    </form>
+    <div class="bg-white shadow-sm p-3" style="margin-top:10px">
+      <div class="list-inline">
+      <dl style="color:black;"  *ngIf="this.futureData?.predicted_sales" >
+        Predicted sales: {{ this.futureData?.predicted_sales | number:'1.2-2'  }} millions
+      </dl>
+      </div>
+    </div>
+      </div>
+</ng-container>
+    </div>
+</div>

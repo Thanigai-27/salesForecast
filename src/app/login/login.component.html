@@ -1,0 +1,43 @@
+
+<div class="container">
+  <div class="left">
+    <div class="header">
+      <h2 class="animation a1">Welcome Back</h2>
+      <h4 class="animation a2">Log in to your account using email and password</h4>
+    </div>
+    <div class="form">
+       <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                      
+                      <mat-error style="color:Tomato;" *ngIf="!loginForm.controls['email'].valid">
+                        Email is required
+                      </mat-error>
+          
+
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" formControlName="password" class="form-control" id="password" placeholder="Password">
+                      <mat-error style="color:Tomato;" *ngIf="!loginForm.controls['password'].valid">
+                        Password is required
+                      </mat-error>
+                      <div>
+                      <a style = "color: rgb(96, 56, 216); margin-top: 10px;" routerLink="/signup">New User? Click to SignUp !!</a>
+                      </div>
+                    </div>
+                    
+                
+                
+      <button type="submit" class="animation a6">LOGIN</button>
+      
+    </form>
+   
+    </div>
+  </div>
+  
+ 
+  <div class="right"></div>
+</div>
+

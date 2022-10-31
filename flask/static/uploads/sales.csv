@@ -1,0 +1,61 @@
+ID,CONSOLE,YEAR,CATEGORY,PUBLISHER,RATING,CRITICS_POINTS,USER_POINTS,SalesInMillions
+1630,x360,1992,shooter,Microsoft Game Studios,M,1.123287671,0.016598361,0.957386637
+3521,gba,1993,action,Thq,E,2.297297297,0.457894737,0.8989898
+3521,gc,1994,racing,Nintendo,E,2.178571429,0.111428571,0.998888
+3521,ps2,1995,racing,Ubisoft,E,3.058823529,0.85,0.8809
+3521,ps2,1996,sports,Electronic Arts,E,5.866666667,0.191428571,1.2343
+3521,ps,1997,racing,Take-Two Interactive,E,5.666666667,0.883333333,1.344545
+3521,ps2,1998,racing,Take-Two Interactive,E10+,4.473684211,0.161818182,1.444
+3521,x360,1999,racing,Electronic Arts,E,2.034482759,0.173333333,1.54343
+3521,wii,2000,sports,Electronic Arts,E,1.837209302,0.425,1.6909
+2860,ds,2001,role-playing,Nintendo,E,2.833333333,0.303703704,1.779257365
+731,wii,2002,simulation,Konami Digital Entertainment,E10+,13.2,1.64,1.899994
+495,pc,2003,shooter,Activision,M,4.5625,0.006410256,1.903033
+2641,ps2,2004,sports,Electronic Arts,E,4.181818182,0.326923077,2.00334
+811,ps3,2005,action,Activision,M,2.259259259,0.032579186,3.56
+1803,ps2,2006,platform,Sony Computer Entertainment,E,2.571428571,0.027707006,4.443
+1470,psp,2007,strategy,Idea Factory,T,17.5,0.464705882,3.455
+3781,ps3,2008,racing,Atari,T,1.627906977,0.138636364,3.77
+325,ps2,2009,racing,Empire Interactive,T,4.133333333,0.265,4.65
+2380,ps3,2010,racing,Sony Computer Entertainment,T,9.333333333,0.032589286,4.77
+574,pc,2011,simulation,Paradox Interactive,E,1.416666667,0.006303116,5.99
+3561,wii,2012,action,Lucasarts,T,2.333333333,0.355,3.88
+1593,ps2,2013,misc,Redoctane,T,1.4,0.050289017,4.7889
+4416,x,2014,strategy,Codemasters,T,2.555555556,1.533333333,4.9923
+1784,x360,2015,shooter,Namco Bandai Games,M,1.039215686,0.090277778,5.78032
+3171,ps2,2016,simulation,Konami Digital Entertainment,T,4.125,0.78,6.89787
+822,psv,2017,action,Tecmo Koei,M,18.25,0.89,5.9887
+2972,ps2,2018,role-playing,Square Enix,T,2.055555556,0.165454545,6.3434
+3761,gba,2019,fighting,Infogrames,T,5.857142857,0.630769231,6.3434
+3158,ps2,2020,fighting,Konami Digital Entertainment,M,1.5,0.395238095,7.022
+1630,x360,2021,shooter,Microsoft Game Studios,M,1.123287671,0.016598361,7.011
+1630,x360,1992,shooter,Microsoft Game Studios,M,1.123287671,0.016598361,0.957386637
+3521,gba,1993,action,Thq,E,2.297297297,0.457894737,0.8989898
+3521,gc,1994,racing,Nintendo,E,2.178571429,0.111428571,0.998888
+3521,ps2,1995,racing,Ubisoft,E,3.058823529,0.85,0.8809
+3521,ps2,1996,sports,Electronic Arts,E,5.866666667,0.191428571,1.2343
+3521,ps,1997,racing,Take-Two Interactive,E,5.666666667,0.883333333,1.344545
+3521,ps2,1998,racing,Take-Two Interactive,E10+,4.473684211,0.161818182,1.444
+3521,x360,1999,racing,Electronic Arts,E,2.034482759,0.173333333,1.54343
+3521,wii,2000,sports,Electronic Arts,E,1.837209302,0.425,1.6909
+2860,ds,2001,role-playing,Nintendo,E,2.833333333,0.303703704,1.779257365
+731,wii,2002,simulation,Konami Digital Entertainment,E10+,13.2,1.64,1.899994
+495,pc,2003,shooter,Activision,M,4.5625,0.006410256,1.903033
+2641,ps2,2004,sports,Electronic Arts,E,4.181818182,0.326923077,2.00334
+811,ps3,2005,action,Activision,M,2.259259259,0.032579186,3.56
+1803,ps2,2006,platform,Sony Computer Entertainment,E,2.571428571,0.027707006,4.443
+1470,psp,2007,strategy,Idea Factory,T,17.5,0.464705882,3.455
+3781,ps3,2008,racing,Atari,T,1.627906977,0.138636364,3.77
+325,ps2,2009,racing,Empire Interactive,T,4.133333333,0.265,4.65
+2380,ps3,2010,racing,Sony Computer Entertainment,T,9.333333333,0.032589286,4.77
+574,pc,2011,simulation,Paradox Interactive,E,1.416666667,0.006303116,5.99
+3561,wii,2012,action,Lucasarts,T,2.333333333,0.355,3.88
+1593,ps2,2013,misc,Redoctane,T,1.4,0.050289017,4.7889
+4416,x,2014,strategy,Codemasters,T,2.555555556,1.533333333,4.9923
+1784,x360,2015,shooter,Namco Bandai Games,M,1.039215686,0.090277778,5.78032
+3171,ps2,2016,simulation,Konami Digital Entertainment,T,4.125,0.78,6.89787
+822,psv,2017,action,Tecmo Koei,M,18.25,0.89,5.9887
+2972,ps2,2018,role-playing,Square Enix,T,2.055555556,0.165454545,6.3434
+3761,gba,2019,fighting,Infogrames,T,5.857142857,0.630769231,6.3434
+3158,ps2,2020,fighting,Konami Digital Entertainment,M,1.5,0.395238095,7.022
+1630,x360,2021,shooter,Microsoft Game Studios,M,1.123287671,0.016598361,7.011
